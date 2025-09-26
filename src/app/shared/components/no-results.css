@@ -1,0 +1,14 @@
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #616161;
+}
+
+.no-results-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
