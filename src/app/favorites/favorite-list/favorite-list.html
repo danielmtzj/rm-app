@@ -1,1 +1,14 @@
-<p>favorite-list works!</p>
+<h2>Favoritos</h2>
+
+<app-no-results
+  *ngIf="favorites().length === 0"
+  message="Aún no has agregado personajes a tus favoritos."
+/>
+
+<div class="grid">
+  <div *ngFor="let fav of favorites()" class="card">
+    <img [src]="fav.image" [alt]="fav.name" />
+    <h3>{{ fav.name }}</h3>
+    <p>{{ fav.species }}</p>
+  </div>
+</div>
