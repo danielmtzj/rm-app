@@ -1,1 +1,18 @@
-<p>character-detail works!</p>
+<div class="character-card">
+  <img [src]="character().image" [alt]="character().name" class="character-image" />
+
+  <div class="character-details">
+    <h2 class="character-name">{{ character().name }}</h2>
+    <p><strong>Especie:</strong> {{ character().species }}</p>
+    <p><strong>Ubicación:</strong> {{ character().location.name }}</p>
+  </div>
+</div>
+
+<h3 class="episode-section-title">Episodios</h3>
+<div class="episode-grid">
+  <div *ngFor="let ep of character().episode" class="episode-box">
+    <a [href]="ep" target="_blank" class="episode-link">
+      Ver episodio #{{ ep.split('/').pop() }}
+    </a>
+  </div>
+</div>
