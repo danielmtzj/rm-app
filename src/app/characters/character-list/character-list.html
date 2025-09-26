@@ -1,1 +1,28 @@
-<p>character-list works!</p>
+<h2>Personajes</h2>
+
+<input
+  type="text"
+  [value]="filter()"
+  (input)="filter.set($any($event.target).value)"
+  placeholder="Filtrar por nombre"
+  class="filter-input"
+/>
+
+<app-no-results
+  *ngIf="filteredCharacters().length === 0"
+  message="No se encontraron personajes que coincidan con el filtro."
+/>
+
+<div class="grid">
+  <div *ngFor="let char of filteredCharacters()" class="card">
+    <img [src]="char.image" [alt]="char.name" />
+    <h3>{{ char.name }}</h3>
+    <p>{{ char.species }}</p>
+
+    <button (click)="toggleFavorite(char)">
+      {{ isFavorite(char.id) ? '❌ Quitar de favoritos' : '💗 Agregar a favoritos' }}
+    </button>
+
+    <a [routerLink]="['/characters', char.id]">Ver detalle</a>
+  </div>
+</div>
