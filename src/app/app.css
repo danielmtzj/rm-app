@@ -1,0 +1,78 @@
+.navbar {
+  background-color: var(--main-color);
+  color: var(--text-light);
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navbar-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a.active {
+  color: var(--text-hover);
+}
+
+.navbar-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: var(--main-color);
+  padding: 1rem 2rem;
+}
+
+.navbar-mobile a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile a.active {
+  color: var(--text-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-mobile {
+    display: flex;
+  }
+}
+
+.main-content {
+  padding: 2rem;
+}
