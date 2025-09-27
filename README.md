@@ -2,7 +2,7 @@
 
 Aplicación con Angular y Firebase que permite explorar personajes de la serie Rick and Morty, filtrarlos por nombre, ver detalles y agregarlos a favoritos.
 
-[Link a la app desplegada en Firebase](https://) 
+[Link a la app desplegada en Firebase](https://rick-morty-f6f93.web.app/characters) 
 
 ## Pasos para la instalacion/ejecucion/despliegue
 
